@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# Use `set -u` to throw warnings if we reference null env vars
+set -u
+
+cat <<EOF > server.env
+GREETER_SLACK_BOT_TOKEN=$1
+EOF
+
+# We want some unique way to name this container when it's running so that it
+# doesn't clash with other containers. This could be injected as an argument to
+# this script. If it needs to be very dynamic, it could be a git short hash.
+NAME=greeter
+
+docker build -t $NAME -f Dockerfile .
+docker network create $NAME
+# NB: This volume is convenient for when you are developing locally and want to
+# see changes reflected in the container so your don't have to stop, build, and
+# start it every time. On the other hand, it can be confusing, because it
+# overwrites the filesystem of the container with your filesystem. So if you
+# have not run `npm install` yet, your empty `node_modules` directory will
+# overwrite the full `node_modules` directory of container, making it appear
+# empty.
+# NB: Running `sh` in the containter because I can't get the server to work!
+docker run -v `pwd`:/usr/src/app --name=server$NAME --net=$NAME --env-file=server.env -itd $NAME sh
