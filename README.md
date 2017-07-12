@@ -26,3 +26,14 @@ then in tmux window
    1  nodejs server.js &
 ```
    
+To leave the tmux window type:
+
+```
+ctrl-b d
+```
+
+To rejoin the tmux window use:
+
+```
+tmux attach
+```
