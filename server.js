@@ -17,7 +17,7 @@ var bot = controller.spawn({
 
 var greet = "Welcome and great to have you with us! Please do introduce yourself in #new_members (if you haven't already), and if you have any general technical thoughts/issues/questions please ask in #techtalk - #random is for everything else :slightly_smiling_face:"
 
-greet += "\n\n\nsee https://github.com/AgileVentures/AgileVentures/blob/master/JOINING_A_PROJECT.md for more on joining a project"
+greet += "\n\n\nbtw, are you interested in React, Elixir or RSpec?  We're offering a free Premium mob programming session to anyone who likes us on facebook.com/agileventures or follows us on twitter.com/agileventures ..."
 
 controller.on('team_join', function(bot, message){
   console.log(message)
