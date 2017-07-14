@@ -2,7 +2,35 @@
 
 Greeter Bot greets folks joining our Slack Instance
 
-Here's how I installed the bot to run on an AWS instance:
+### Dokku install
+
+Now installed via dokku on Azure:
+
+```
+→ git remote -v
+azure-production	dokku@agileventures.eastus.cloudapp.azure.com:greeterbot-production (fetch)
+azure-production	dokku@agileventures.eastus.cloudapp.azure.com:greeterbot-production (push)
+origin	git@github.com:tansaku/greeter_bot.git (fetch)
+origin	git@github.com:tansaku/greeter_bot.git (push)
+
+→ git push azure-production master
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (4/4), done.
+....
+-----> Shutting down old containers in 60 seconds
+=====> fc005e593ed37166e80f04c0b0093f367771bff7aa055e4bc2900fa8a9a2850b
+=====> Application deployed:
+       http://greeterbot-production.agileventures.eastus.cloudapp.azure.com
+
+To agileventures.eastus.cloudapp.azure.com:greeterbot-production
+   f7db8d3..53ef0fc  master -> master
+   
+```
+
+### AWS Install
+
+Here's how I previously installed the bot to run on an AWS instance:
 
 ```
     1  sudo apt-get install git
