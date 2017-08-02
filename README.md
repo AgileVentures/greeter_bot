@@ -2,9 +2,24 @@
 
 Greeter Bot greets folks joining our Slack Instance
 
+Note that the GREETER_SLACK_BOT_TOKEN needs to be set in your environment for the bot to connect to a Slack instance.  See https://api.slack.com/bot-users for more details.  Once you have a bot token you can ensure the bot has access to it like so:
+
+```
+$ GREETER_SLACK_BOT_TOKEN=<YOUR_TOKEN> node server.js
+```
+
+### C9 install
+
+```
+$ git clone https://github.com/AgileVentures/greeter_bot
+$ cd greeter_bot
+$ npm install
+$ node server.js
+```
+
 ### Dokku install
 
-Now installed via dokku on Azure:
+The production bots are now installed via dokku on Azure:
 
 ```
 → git remote -v
