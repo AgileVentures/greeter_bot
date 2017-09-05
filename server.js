@@ -15,12 +15,13 @@ var bot = controller.spawn({
 //   bot.reply(message, reply);
 // });
 
-var greet = "Welcome and great to have you with us! Please do introduce yourself in #new_members (if you haven't already), and if you have any general technical thoughts/issues/questions please ask in <#C02AA0ARR|techtalk> - <#C0285CSUH|random> is for everything else :slightly_smiling_face:"
+var greet = "Welcome and great to have you with us! Please do introduce yourself in <#C02G8J689|new_members> (if you haven't already), and if you have any general technical thoughts/issues/questions please ask in <#C02AA0ARR|techtalk> - <#C0285CSUH|random> is for everything else :slightly_smiling_face:"
 
-greet += "\n\n\nbtw, are you interested in React, Elixir or RSpec?  We're offering a free Premium mob programming session to anyone who likes us on facebook.com/agileventures or follows us on twitter.com/agileventures ..."
+greet += "\n\n\nbtw, are you interested in React, Elixir or RSpec?  We're offering a <https://www.agileventures.org/premium-mob-offer|free Premium mob programming session> to anyone who likes us on facebook.com/agileventures or follows us on twitter.com/agileventures ..."
 
 controller.on('team_join', function(bot, message){
   console.log(message)
+  // greet = greet.replace('USER_NAME', message.user); // got [object Object] for some reason
   bot.say({channel: message.user.id, text: greet});
 });
 
