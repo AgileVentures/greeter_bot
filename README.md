@@ -2,10 +2,17 @@
 
 Greeter Bot greets folks joining our Slack Instance
 
-Note that the GREETER_SLACK_BOT_TOKEN needs to be set in your environment for the bot to connect to a Slack instance.  See https://api.slack.com/bot-users for more details.  Once you have a bot token you can ensure the bot has access to it like so:
+Note that the GREETER_SLACK_BOT_TOKEN needs to be set in your environment for the bot to connect to a Slack instance.  See https://api.slack.com/bot-users for more details.  
+
+### Manual Testing
+
+You can create your own slack instance to test, or come to the [#bots channel](https://agileventures.slack.com/messages/bots) on the AV slack to ask @tansaku for a token for the [agileventuresbottest slack](https://join.slack.com/t/agileventuresbottest/shared_invite/enQtMjIwOTkyMTQwNjQ0LWZlMjI4YjA4OGYwZTcxMjRmMzlkZTMzZWU3OWJiOWU5YjA5MzIzZjIxMjUyNzdkY2YxZTlmMTYyY2IxMmMzN2Q).
+
+
+Then you can start the bot like so:
 
 ```
-$ GREETER_SLACK_BOT_TOKEN=<YOUR_TOKEN> node server.js
+GREETER_SLACK_BOT_TOKEN=<INSERT_TOKEN> npm start
 ```
 
 ### C9 install
