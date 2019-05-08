@@ -50,6 +50,8 @@ To agileventures.eastus.cloudapp.azure.com:greeterbot-production
    
 ```
 
+See also [GCP notes](https://github.com/AgileVentures/AgileVentures/blob/master/devops/gcp-dokku-setup.md)
+
 ### AWS Install
 
 Here's how I previously installed the bot to run on an AWS instance:
